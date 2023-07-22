@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Portugal Overlay
+// @name         Portugal Overlay The Second
 // @namespace    http://tampermonkey.net/
 // @version      0.2
 // @description  Orgulho tuga!
@@ -21,7 +21,7 @@ if (window.top !== window.self) {
 }
 
 function updateImage() {
-    overlayImage.src = "https://raw.githubusercontent.com/PortugueseMan/rplace-tuga/main/canva.png"
+    overlayImage.src = "https://raw.githubusercontent.com/JARCosta/rplace-tuga/main/canva.png"
 }
 
-setInterval(function () {overlayImage.src = "https://raw.githubusercontent.com/PortugueseMan/rplace-tuga/main/canva.png"}, 30000);
+setInterval(function () {overlayImage.src = "https://raw.githubusercontent.com/JARCosta/rplace-tuga/main/canva.png"}, 30000);
