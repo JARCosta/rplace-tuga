@@ -26,10 +26,7 @@ color_pallet1 = ["#FF4500", "#FFA800", "#FFD635", "#00A368", "#3690EA", "#B44AC0
 
 
 def convert_hex_to_rgb():
-    rgb_colors = []
-    for color in color_pallet1:
-        rgb_colors.append(ImageColor.getrgb(color))
-    return rgb_colors
+    return [ImageColor.getrgb(color) for color in color_pallet1]
 
 
 def find_closest_color(pixel):
@@ -47,11 +44,7 @@ def find_closest_color(pixel):
     white_distance = np.linalg.norm(np.array(pixel_rgb) - np.array(white)) + white_offset
 
     if min_distance > gray_scale:
-        if black_distance <= white_distance:
-            closest_color = black
-        else:
-            closest_color = white
-
+        closest_color = black if black_distance <= white_distance else white
     return closest_color
 
 
